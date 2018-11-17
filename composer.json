@@ -1,0 +1,10 @@
+{
+    "name": "ibrahima/agence_immo_symfony",
+    "authors": [
+        {
+            "name": "ibrahimdans",
+            "email": "ibrahima.dansoko@outlook.com"
+        }
+    ],
+    "require": {}
+}
