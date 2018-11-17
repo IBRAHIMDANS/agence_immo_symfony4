@@ -97,6 +97,7 @@
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/psr/container" />
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/cocur/slugify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
