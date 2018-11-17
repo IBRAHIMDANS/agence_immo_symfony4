@@ -5,4 +5,28 @@
             <h1> Agence Immobiliere YEAH </h1>
             <p> Agence immobiliere bien et service</p>
         </div>
+        <div class="container">
+            <h2> Les derniers items</h2>
+            <div class="row flex">
+                {% for property in properties %}
+                    <div class="div col-3">
+                        <div class="card">
+                            <div class="car-body">
+                                <h5 class="card-title">
+                                    <a href="">{{ property.title }}</a>
+                                    <p class="card-text">
+                                        {{ property.city }} ({{ property.postalCode }})
+                                    </p>
+                                    <div class="text-primary">{{ property.price | number_format(0, '',' ' ) }} </div>
+
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
     {% endblock %}
+
