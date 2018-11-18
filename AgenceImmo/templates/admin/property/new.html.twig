@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h2> Enregistrer un bien </h2>
+        {{ form_start(form) }}
+        {{  include('admin/property/_form.html.twig',{form : form , button : 'Enregistrer'}) }}
+    </div>
+
+{% endblock %}
+

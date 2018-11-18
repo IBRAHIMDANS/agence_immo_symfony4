@@ -23,7 +23,12 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="95d63885-6ad2-4e2e-8a77-dd2a4fef1ea1">
+        <schema name="agence_immo" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
+        <schema name="symfonyform" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="95d63885-6ad2-4e2e-8a77-dd2a4fef1ea1">
