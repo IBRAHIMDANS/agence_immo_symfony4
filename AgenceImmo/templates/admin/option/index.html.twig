@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{%  block title 'Gestion des biens ' %}
+    {% block body %}
+<div class="jumbotron text-center">
+    <h1> Agence Immobiliere YEAH </h1>
+    <p> Agence immobiliere bien et service</p>
+</div>
+<div class="container mt-4">
+<h1>Gerer les les options</h1>
+    {% for message in app.flashes('success') %}
+    <div class="div alert alert-success">  {{ message }}</div>
+    {% endfor %}
+    <table class="table table-stripe4">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>ACTIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+    {% for option in options %}
+        <tr>
+            <td>{{  option.name }}</td>
+            <td>
+                <a href="{{ path('admin.option.edit',{id : option.id}) }}" class="btn btn-secondary"> Editer </a>
+                <form method="post" action="{{ path('admin.option.delete',{id : option.id}) }}" onsubmit="return confirm('Supprimer  ?')" style="display: inline-block" >
+                    <input type="hidden" name="_method" value="DELETE" >
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ option.id) }}">
+                    <button class="btn btn-danger">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-right">
+        <a href="{{ path('admin.option.new')}}" class="btn btn-primary"> Ajouter des options </a>
+    </div>
+    {% endblock %}
+
