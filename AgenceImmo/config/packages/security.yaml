@@ -12,7 +12,9 @@ security:
             security: false
         main:
             anonymous: true
-
+            logout:
+                path: /logout
+                target: /
             # activate different ways to authenticate
 
             #http_basic: true
@@ -29,4 +31,6 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
     encoders:
         #Symfony\Component\Security\Core\User\User: plaintext
-        App\Entity\UserBDD: plaintext
+        App\Entity\UserBDD:
+            algorithm: bcrypt
+            cost: 12

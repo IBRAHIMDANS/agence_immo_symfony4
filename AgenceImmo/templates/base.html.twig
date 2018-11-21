@@ -19,6 +19,10 @@
                     <a class= "nav-link {% if  menu is defined and menu == 'properties' %} active {% endif %} " href="{{ path('property.index') }}">Acheter <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+            {% if app.user %}
+                <ul class="nav nav-bar">
+                <li class="nav item"><a href="{{path('logout')}}">Se déconnecter </a></li></ul>
+            {% endif %}
                 </div>
     </nav>
         {% block body %}{% endblock %}
