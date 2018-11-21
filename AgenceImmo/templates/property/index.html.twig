@@ -1,7 +1,33 @@
 {% extends 'base.html.twig' %}
 {%  block title 'ALL THINGS' %}
     {% block body %}
+            <div class="jumbotron">
+                {{ form_start(forms) }}
+                <div class="col">
+                {{ form_row(forms.minSurface) }}
+                </div>
+                <div class="col">
+                {{ form_row(forms.maxprice) }}
+                </div>
+                <div class="col">
+                <button class="btn btn-primary">Search </button>
+                </div>
+                {{ form_end(forms) }}
+
+            </div>
         <div class="container mt-4">
             <h1> NOS BIENS </h1>
+            <div class="row">
+
+            {% for property in allitems %}
+                <div class="col-md-4">
+
+            {% include'property/_property.html.twig' %}
+                </div>
+            {% endfor %}
+            </div>
+            <div class="pagination justify-content-center">
+                {{ knp_pagination_render(allitems) }}
+            </div>
         </div>
     {% endblock %}

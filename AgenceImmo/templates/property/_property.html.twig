@@ -1,0 +1,17 @@
+<div class="card mb-4">
+
+    <div class="car-body">
+        <div class="car-title">
+            <a href="{{ path('property.show',{slug: property.slug, id : property.id}) }}">
+                {{  property.title }}
+            </a>
+            <div class="car-text">
+                {{ property.surface }} m²  -
+                {{ property.city}}
+            </div>
+            <div class="car-text-primary">
+                {{ property.formattedprice }} €
+            </div>
+        </div>
+    </div>
+</div>

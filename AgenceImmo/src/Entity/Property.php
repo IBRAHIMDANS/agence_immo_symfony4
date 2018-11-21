@@ -30,7 +30,6 @@ class Property
      *     type="string",
      *     message="The value {{ value }} is not a valid {{ type }}."
      * )
-     *
      */
     private $title;
 
