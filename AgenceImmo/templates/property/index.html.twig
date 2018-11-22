@@ -2,7 +2,9 @@
 {%  block title 'ALL THINGS' %}
     {% block body %}
             <div class="jumbotron">
+                <div class="container">
                 {{ form_start(forms) }}
+                    <div class="from row align-items-end">
                 <div class="col">
                 {{ form_row(forms.minSurface) }}
                 </div>
@@ -13,10 +15,13 @@
                     {{ form_rest(forms) }}
                 </div>
                 <div class="col">
+                    <div class="form-group">
                 <button class="btn btn-primary">Search </button>
                 </div>
+                </div>
+                </div>
                 {{ form_end(forms) }}
-
+                </div>
             </div>
         <div class="container mt-4">
             <h1> NOS BIENS </h1>
