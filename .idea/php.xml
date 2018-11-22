@@ -103,6 +103,12 @@
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/AgenceImmo/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/AgenceImmo/vendor/liip/imagine-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

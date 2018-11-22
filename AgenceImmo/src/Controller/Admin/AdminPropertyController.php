@@ -10,7 +10,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+
 
 class AdminPropertyController extends  AbstractController{
     /**
@@ -65,13 +65,14 @@ class AdminPropertyController extends  AbstractController{
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function edit(Property $property, Request $request)
+    public function edit(Property $property,Request $request)
     {
 
         $form = $this->createForm(PropertyType::class,$property);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
+
             $this->manager->flush();
             $this->addFlash('success','bien modifier avec success');
             return $this->redirectToRoute('admin.property.index');
